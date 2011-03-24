@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More;
 use ok 'FizzBuzz';
-is(FizzBuzz::fizzbuzz(1), '1', '1 ok');
+is(FizzBuzz::fizzbuzz(1), '1\n', '1 ok');
 is(FizzBuzz::fizzbuzz(3), 'fizz\n', '3 ok');
 is(FizzBuzz::fizzbuzz(5), 'buzz\n', '5 ok');
 is(FizzBuzz::fizzbuzz(6), 'fizz\n', '6 ok');
