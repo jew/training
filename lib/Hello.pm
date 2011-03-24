@@ -4,10 +4,10 @@ sub hei {
     my ($name) = @_; 
     if($name eq "Bjorn"){
         return ("Hei $name");
-	}
-	else {
+    }
+    else {
         return ("Hello $name");
-	}
+    }
 }
 1;
 =head2 hei
