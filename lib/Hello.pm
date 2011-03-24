@@ -5,7 +5,7 @@ sub hei {
     if($name eq "Bjorn"){
         return ("Hei $name");
 	}else{
-	 	return ("Hello $name");
+        return ("Hello $name");
 	}
 }
 1;
