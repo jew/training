@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+use Test::More;
+use ok 'FizzBuzz';
+is(FizzBuzz::fizzbuzz(1), '1', '1 ok');
+is(FizzBuzz::fizzbuzz(3), '3', '3 ok');
+is(FizzBuzz::fizzbuzz(5), '5', '5 ok');
+is(FizzBuzz::fizzbuzz(6), '6', '6 ok');
+is(FizzBuzz::fizzbuzz(15), '15', '15 ok');
+done_testing();
