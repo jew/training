@@ -1,9 +1,9 @@
 package FizzBuzz;
 use strict;
-sub  fizzbuzz {
+sub fizzbuzz {
     my $num = 1;
-    my $max = @ARGV[0];
-    if(($num%3==0)&&($num%5==0)){
+    my ($max)= @_;
+    if(($num%3==0)&&($num%5==0)) {
         return("fizzbuzz\n");
     } 
 	elsif($num%3==0) {
