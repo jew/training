@@ -1,9 +1,9 @@
 package Hello;
 use strict;
 
-&hei(@ARGV[0]);
+&hei(@_);
 sub hei{
-     my ($name) = @ARGV[0]; 
-     return print("Hello $name\n");
+     my ($name) = @_; 
+     return "Hello $name\n";
 }
 1;
