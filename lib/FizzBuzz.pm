@@ -1,18 +1,21 @@
 package FizzBuzz;
 use strict;
 sub fizzbuzz {
-    my $num = 1;
-    my ($max)= @_;
+    my ($num) = @_;
     if(($num%3==0)&&($num%5==0)) {
-        return("fizzbuzz\n");
+        return "fizzbuzz";
+    }
+    elsif($num%3==0) {
+        return "fizz";
     } 
-	elsif($num%3==0) {
-		return("fizz\n");
-    } 
-	elsif($num%5==0) {
-        return("buzz\n");
-	}
-	else {
-		return("$num\n");
-	}
+    elsif($num%5==0) {
+        return  "buzz";
+    }
+    else {
+     return  "$num";
+   }
 }
+2;
+=head2 fizzbuzz
+    fizzbuzz() is a subroutine that get number  from command line and compare number with condition and return value
+=cut
