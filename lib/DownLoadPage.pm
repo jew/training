@@ -15,22 +15,21 @@ sub _build__ua {
 
 sub download_to_memory {
     my ($self) = @_;
+    #return $self->url;
     my $response = $self->_ua->get($self->url);
     my $decode = $response->decoded_content;
     return $decode;
 }
 sub write_to_file() {
-     my ($self) = @_;
-     my $text =&download_to_memory;
-     #write_file('content.txt',{binmode => ':utf8'},($text));
-     write_file($self,{binmode => ':utf8'},($text));
+    my ($self) = @_;
+    my $text = $self->download_to_memory;
+    write_file('content.txt',{binmode => ':utf8'},$text);
 }
 #sub download_to_file {
     #my $s_url = &download_to_memory;
     #write_file('content.txt',{binmode => ':utf8'},($text));
     
 #}
-#&download_to_memory();
 1;
 =head2 DownLoadPage
     DownLoadPage() is a subroutine that use for downloading page.
