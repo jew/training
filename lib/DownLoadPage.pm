@@ -38,5 +38,5 @@ sub download_to_file {
 }
 1;
 =head2 DownLoadPage
-    DownLoadPage() is a subroutine that use for downloading page.
+    
 =cut
