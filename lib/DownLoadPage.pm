@@ -20,16 +20,22 @@ sub download_to_memory {
     my $decode = $response->decoded_content;
     return $decode;
 }
-sub write_to_file() {
-    my ($self) = @_;
+sub write_to_file {
+    my ($self, $filename) = @_;
     my $text = $self->download_to_memory;
-    write_file('content.txt',{binmode => ':utf8'},$text);
+    write_file($filename,{binmode => ':utf8'},$text);
+    #return 1;
 }
-#sub download_to_file {
-    #my $s_url = &download_to_memory;
-    #write_file('content.txt',{binmode => ':utf8'},($text));
-    
-#}
+sub download_to_file {
+    my ($self, $filename) = @_;
+    if(&download_to_memory ne '') {
+        $self->download_to_memory;
+        $self->write_to_file($filename);
+    }
+    else {
+        $self->write_to_file($filename);
+    }   
+}
 1;
 =head2 DownLoadPage
     DownLoadPage() is a subroutine that use for downloading page.
