@@ -12,12 +12,11 @@ my $dlp = DownLoadPage->new(url => $url);
 print "Your page: \n";
 print $dlp->download_to_memory;
 print "\n";
-    if( $dlp->write_to_file($filename)==1) {
-        print "SAVE FILE : OK\n";
-    }
-    else {
-            print "Can not write";
-    }      
-    
-print $dlp->download_to_file($filename);
+if( $dlp->write_to_file($filename)==1) {
+    print "SAVE FILE : OK\n";
+}
+else {
+    print "Can not write";
+}         
+print $dlp->download_to_file;
    
