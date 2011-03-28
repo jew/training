@@ -15,7 +15,6 @@ sub _build__ua {
 
 sub download_to_memory {
     my ($self) = @_;
-    #return $self->url;
     my $response = $self->_ua->get($self->url);
     my $decode = $response->decoded_content;
     return $decode;
@@ -24,7 +23,6 @@ sub write_to_file {
     my ($self, $filename) = @_;
     my $text = $self->download_to_memory;
     write_file($filename,{binmode => ':utf8'},$text);
-    #return 1;
 }
 sub download_to_file {
     my ($self, $filename) = @_;
