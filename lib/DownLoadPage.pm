@@ -27,16 +27,6 @@ sub write_to_file {
     my $text = $self->content;
     write_file($filename,{binmode => ':utf8'},$text);
 }
-sub download_to_file {
-    my ($self, $filename) = @_;
-    if($self->content ne '') {
-        $self->write_to_file($filename);
-    }
-    else {
-        $self->download_to_memory($self->content);
-        $self->write_to_file($filename);
-    }
-}
 1;
 =head2 _build__au
     
