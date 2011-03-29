@@ -10,7 +10,7 @@ my $url = $ARGV[0];
 my $filename = $ARGV[1];
 my $dlp = DownLoadPage->new(url => $url);
 print "Your page: \n";
-print $dlp->_build_content;
+print $dlp->content;
 print "build content";
 print "\n";
 if($dlp->download_to_memory ne '') {
