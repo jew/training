@@ -30,7 +30,6 @@ if(($url) ne ('')) {
     }         
 }
 else {
-    print "please assign url and file name /n";
-    print "Example : perl script/downloadpage.pl http://www.hunsa.com  hunsa.txt /n";
+    die "please assign url and file name \n";
 }
    
