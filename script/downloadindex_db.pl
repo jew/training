@@ -4,7 +4,6 @@ use warnings;
 use FindBin;
 use lib "$FindBin::Bin/../lib";
 use DownLoadIndex_db;
-use Data::Dumper;
 my $url ='http://www.nasdaq.com/';
 my $dlp = DownLoadIndex_db->new(url => $url);
 $dlp->content;
