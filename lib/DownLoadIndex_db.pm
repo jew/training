@@ -33,23 +33,27 @@ sub _build_content {
             my $value  = $2;
             my %result = ( name => $name, value => $value );
             push( @all, \%result ); 
-        }
+        }my $url ='http://www.nasdaq.com/';
+my $dlp = DownLoadIndex_db->new(url => $url);
     }
     return \@all; 
 }  
 sub insert_to_database {
+    # if this Sub return 1 ,this sub works 
+    my $d;
     my ($self)  = @_;
     my @content = @{$self->content};
     my $db =$self->db;
     foreach my $h (@content) {
-    $db->resultset('Stocks')->update_or_create(
-         {
-          name => $h->{name},
-          value =>$h->{value},       
+        $d =  $db->resultset('Stocks')->update_or_create(
+        {
+            name => $h->{name},
+            value =>$h->{value},       
         }, 
         { key => "name" } 
          );  
     } 
+   if($d ne '') { return 1; } 
 }
 13;
 
